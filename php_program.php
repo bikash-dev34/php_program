@@ -193,18 +193,20 @@
           ?>
         <h3></h3><br>
         <h1>form</h1><br>
-        <form action="data.php" method="get">
+        <form action="" method="post">
             <!-- redirect to data.php file after submit -->
             <input type="text" name="name" id="">
             <input type="submit" value="Click for Submit">
         </form>
-        <form action="data.php" method="post">
-            <!-- redirect to data.php file after submit -->
-            <input type="text" name="name1" id="">
-            <input type="submit" value="Click  Submit">
-        </form>
+
         <?php
-           
+        if(isset($_POST["name"])){
+
+            echo $_POST['name'];
+        }
+        else{
+            die ("Please enter name");
+        }
             ?>
     </body>
 
